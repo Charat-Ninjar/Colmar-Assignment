@@ -1,4 +1,5 @@
 * {
+    max-width: 100%;
     margin: 0;
     padding: 0;
     color: #4A4A4A;
@@ -8,10 +9,6 @@
 
 p {
     color: #b6b4b4;
-}
-
-html {
-    margin: 0;
 }
 
 .navbar-container {
@@ -40,7 +37,7 @@ html {
     gap: 16px;
 }
 
-@media screen and (max-width :325px) {
+@media screen and (max-width :725px) {
     .navbar-container {
         display: none;
     }
@@ -48,7 +45,8 @@ html {
     .mobile-navlist {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        height: 64px;
     }
 }
 
@@ -60,21 +58,20 @@ html {
 }
 
 .hero-left {
-    max-width: 60%;
+    width: 60%;
     padding: 32px 24px 32px 24px;
 }
 
 .hero-left img {
-    max-width: 100%;
+    width: 100%;
 }
 
 
 .hero-right {
-    max-width: 40%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-around;
 
 }
 
@@ -82,7 +79,7 @@ html {
 .information-title,
 .learning-title,
 .thesis-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
     margin-top: 32px;
 }
@@ -97,13 +94,20 @@ html {
     padding: 8px 0px;
     background-color: #4A4A4A;
     color: #FFFFFF;
-    max-width: 40%
+    max-width: fit-content;
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 725px) {
     .hero {
         display: flex;
         flex-direction: column;
+    }
+    .hero-right {
+        margin: 32px 0 32px 16px;
+    }
+
+    .hero-button {
+        background-color: #a09e9e;
     }
 }
 
@@ -184,7 +188,7 @@ html {
     background-color: #b5b0b0;
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 725px) {
     .information-left {
         display: none;
     }
@@ -292,7 +296,7 @@ html {
     align-items: center;
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 725px) {
     .thesis-left-title {
         display: none;
     }
@@ -320,5 +324,55 @@ html {
 @media screen and (max-width: 325px) {
     .footer-right{
         display: none;
+    }
+}
+
+/* Your existing CSS rules here */
+
+@media screen and (max-width: 768px) {
+    .navbar-left,
+    .navbar-right {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left {
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        text-align: left;
+    }
+    .hero
+
+    .hero-button {
+        max-width: 100%;
+    }
+
+    .information {
+        flex-direction: column;
+    }
+
+    .information-left,
+    .information-right {
+        max-width: 100%;
+    }
+
+    .box-content-right {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-footer {
+        margin-top: 8px;
     }
 }
