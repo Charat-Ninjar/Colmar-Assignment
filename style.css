@@ -6,6 +6,9 @@
     font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial,
         sans-serif;
 }
+p {
+    color: #b6b4b4;
+}
 
 html {
     margin: 0;
@@ -62,7 +65,8 @@ html {
 
 .hero-title,
 .information-title,
-.learning-title {
+.learning-title,
+.thesis-title {
     font-size: 60px;
     font-weight: 900;
     margin-top: 32px;
@@ -159,5 +163,98 @@ html {
 }
 
 .courses {
-    background-color: #D8D8D8;
+    background-color: #D8D8D8; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px 72px 32px 72px;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    margin: 32px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .card__content {
+    text-align: left;
+  }
+  
+  .card__title {
+    font-size: 24px;
+    color: #333;
+    margin: 16px 0 8px 16px;
+  }
+  
+  .card__description {
+    color: #b6b4b4;
+    text-align: left;
+    margin: 8px 0px 24px 16px;
+  }
+
+
+
+  @media only screen and (max-width: 770px) {
+    .courses {
+      padding: 2rem 1rem;
+      background-color: inherit;
+    }
+  
+    .card-container{
+      flex-direction: column;
+    }
+  
+    .card {
+      margin: .25rem 0;
+    }
+  
+    .course .text-content {
+      background-color: rgb(216, 216, 216);
+    }
+  
+  } 
+
+  .thesis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thesis-container {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+  }
+  .thesis-left {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 24px 32px 24px;
+  }
+.thesis-left-title {
+    font-size: 34px;
+    margin: 24px 0px 8px 0px;
+}
+
+.thesis-content-box {
+    display: flex;
+    align-items: center;
 }
