@@ -94,7 +94,7 @@ p {
     padding: 8px 0px;
     background-color: #4A4A4A;
     color: #FFFFFF;
-    max-width: fit-content;
+    max-width: 50%
 }
 
 @media screen and (max-width: 725px) {
@@ -103,7 +103,7 @@ p {
         flex-direction: column;
     }
     .hero-right {
-        margin: 32px 0 32px 16px;
+        margin: 0px 0 32px 16px;
     }
 
     .hero-button {
@@ -193,8 +193,19 @@ p {
         display: none;
     }
     .box-content-right {
+        width: auto;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .content-right{
+        max-width: 100%;
+    }
+    .content-left {
+        width: 100%;
+        border: 1px solid rgb(83, 83, 84);
+        box-sizing: border-box;
     }
 }
 .courses {
