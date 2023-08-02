@@ -1,19 +1,17 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     color: #4A4A4A;
     font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial,
         sans-serif;
 }
+
 p {
     color: #b6b4b4;
 }
 
 html {
     margin: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .navbar-container {
@@ -22,6 +20,11 @@ html {
     align-items: center;
     height: 64px;
 }
+
+.mobile-navlist {
+    display: none;
+}
+
 
 .navbar-left,
 .navbar-right {
@@ -35,6 +38,18 @@ html {
 .navbar-list {
     display: flex;
     gap: 16px;
+}
+
+@media screen and (max-width :325px) {
+    .navbar-container {
+        display: none;
+    }
+
+    .mobile-navlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .hero {
@@ -83,6 +98,13 @@ html {
     background-color: #4A4A4A;
     color: #FFFFFF;
     max-width: 40%
+}
+
+@media screen and (max-width: 325px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .information {
@@ -162,8 +184,17 @@ html {
     background-color: #b5b0b0;
 }
 
+@media screen and (max-width: 325px) {
+    .information-left {
+        display: none;
+    }
+    .box-content-right {
+        display: flex;
+        flex-direction: column;
+    }
+}
 .courses {
-    background-color: #D8D8D8; 
+    background-color: #D8D8D8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,71 +215,73 @@ html {
     background-color: white;
 
     margin: 32px;
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-  }
-  
-  .card__content {
+}
+
+.card__content {
     text-align: left;
-  }
-  
-  .card__title {
+}
+
+.card__title {
     font-size: 24px;
     color: #333;
     margin: 16px 0 8px 16px;
-  }
-  
-  .card__description {
+}
+
+.card__description {
     color: #b6b4b4;
     text-align: left;
     margin: 8px 0px 24px 16px;
-  }
+}
 
 
 
-  @media only screen and (max-width: 770px) {
+@media only screen and (max-width: 770px) {
     .courses {
-      padding: 2rem 1rem;
-      background-color: inherit;
+        padding: 2rem 1rem;
+        background-color: inherit;
     }
-  
-    .card-container{
-      flex-direction: column;
-    }
-  
-    .card {
-      margin: .25rem 0;
-    }
-  
-    .course .text-content {
-      background-color: rgb(216, 216, 216);
-    }
-  
-  } 
 
-  .thesis {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: .25rem 0;
+    }
+
+    .course .text-content {
+        background-color: rgb(216, 216, 216);
+    }
+
+}
+
+.thesis {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .thesis-container {
+.thesis-container {
     display: flex;
     width: 100%;
     margin-top: 32px;
-  }
-  .thesis-left {
+}
+
+.thesis-left {
     max-width: 60%;
     display: flex;
     flex-direction: column;
     margin: 0px 24px 32px 24px;
-  }
+}
+
 .thesis-left-title {
     font-size: 34px;
     margin: 24px 0px 8px 0px;
@@ -257,4 +290,35 @@ html {
 .thesis-content-box {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 325px) {
+    .thesis-left-title {
+        display: none;
+    }
+    .thesis-left-description {
+        display: none;
+    }
+    .thesis-right {
+        display: none;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 24px 16px 24px;
+    color: #b6b4b4;
+    border-top: #4A4A4A;
+}
+
+.right-footer {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 325px) {
+    .footer-right{
+        display: none;
+    }
 }
